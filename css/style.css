@@ -1,0 +1,97 @@
+*{
+	margin: 0 auto;
+	padding: 0px;
+}
+body{
+	background: url(../image/bg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+p{
+	color: #fff;
+	text-align: center;
+}
+.bungkus{
+	width: 500px;
+	height: auto;
+	transition: box-shadow 0.5s;
+}
+.bungkus-form{
+	width: 500px;
+	height: auto;
+	margin-top: 150px;
+	transition: box-shadow 0.5s;
+}
+.bungkus-form h1{
+	text-align: center;
+	color: #fff;
+	margin-bottom: 30px;
+}
+.form-login{
+	width: 400px;
+	height:auto;
+}
+.form-login form p{
+	color: #fff;
+	font-size: 18px;
+	margin-top: 10px;
+}
+.text-form{
+	float: left;
+}
+.form-login form input[type=text]{
+	width: 400px;
+	height: 40px;
+	margin-top: 10px;
+	border-radius: 5px;
+	border: none;
+	padding: 10px;
+	font-size: 18px;
+}
+.form-login form input[type=password]{
+	width: 400px;
+	height: 40px;
+	margin-top: 10px;
+	border-radius: 5px;
+	border: none;
+	padding: 10px;
+	font-size: 18px;
+}
+.form-login button[type=submit] {
+	width: 400px;
+	border: none;
+	margin-top: 20px;
+	height: 40px;
+	border-radius: 5px;
+	background: #F12C30;
+	font-size: 20px;
+	color: #fff;
+	border: 2px solid #F12C30;
+	transition: 1s ease-in-out;
+}
+.form-login button[type=submit]:hover{
+	border: 2px solid #F12C30;
+	background: transparent; 
+	cursor: pointer;
+}
+.bungkus-form .text{
+	text-align: center;
+	margin-top: 10px;
+}
+.bungkus-form .text a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	transition: 1s ease-in-out;
+}
+.bungkus-form .text a:hover{
+	color :#F12C30;
+}
+
+body:hover .bungkus{
+	box-shadow:0px 0px 50px #333;
+}
+.bungkus-form:hover{
+	box-shadow:  0px 0px 80px #000;
+}

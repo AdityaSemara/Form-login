@@ -6,28 +6,24 @@ session_start();
 <html>
 <head>
 <title>LOGIN</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<form method="post">
-	<table>
-		<tr>
-			<td>Username</td>
-			<td>:</td>
-			<td><input type="text" name="username"></td>
-		</tr>
-		<tr>
-			<td>Password</td>
-			<td>:</td>
-			<td><input type="password" name="password"></td>
-		</tr>
-		<tr>
-			<td>
+<div class="bungkus">
+	<div class="bungkus-form">
+		<h1>Welcome</h1>
+		<div class="form-login">
+			<form method="post">
+				<p class="text-form">User Name</p>
+				<input type="text" name="username">
+				<p class="text-form">Password</p>
+				<input type="password" name="password"><br>
 				<button type="submit" name="btnlogin">Login</button>
-				<a href="form-daftar.php"><button>Register</button></a>
-			</td>
-		</tr>
-	</table>
-</form>
+			</form>
+		</div>
+		<p class="text"><a href="form-daftar.php">Forgot Password ?</a></p>
+	</div>
+</div>
 <?php 
 	
 	if(isset($_POST['btnlogin'])){
@@ -41,7 +37,7 @@ session_start();
 			echo "Login sukses";
 			echo "<meta http-equiv='refresh' content='1.5;url=index.php'>";
 		}else{
-			echo "Login Gagal";
+			echo "<p>Login Gagal</p>";
 			echo "<meta http-equiv='refresh' content='1;url=login.php'>";
 		}
 	}
