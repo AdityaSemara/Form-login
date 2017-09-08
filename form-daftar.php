@@ -14,16 +14,16 @@
 			<div class="form-login">
 				<form method="POST">
 					<p class="text-form">Nama</p>
-					<input type="text" name="nama" placeholder="Nama lengkap">
+					<input type="text" name="nama" placeholder="Nama lengkap" required>
 					<p class="text-form">User Name</p>
-					<input type="text" name="username" placeholder="User Name">
+					<input type="text" name="username" placeholder="User Name" required>
 					<p class="text-form">Password</p>
-					<input type="password" name="password">
+					<input type="password" name="password" required>
 					<p class="text-form">Cornfirm Password</p>
-					<input type="password" name="password1">
-					<button type="submit" value="Daftar" name="daftar">	Daftar</button>
+					<input type="password" name="password1" required>
+					<button type="submit" value="Daftar" name="daftar" class="tombol">	Daftar</button>
 				</form>
-				<a href="login.php"><input type="button" value="Login"></a>
+				<a href="login.php" class="tombol-login"><input type="button" value="Login" class="tombol"></a>
 			</div>
 		</div>
 	</div>
@@ -39,10 +39,10 @@
 		if ($password == $password1){
 			$sql = "INSERT INTO form_daftar(nama, username, password) VALUE ('$nama', '$username', '$password')";
 			$query = mysqli_query($db, $sql);
-			echo "Register Sukses, silahkan login";
+			echo "<p>Register Sukses, silahkan login</p>";
 			echo "<meta http-equiv='refresh' content='1; url=login.php'>";
 		}elseif( $password !== $password1){
-			echo "Password tidak cocok";
+			echo "<p>Password tidak cocok</p>";
 			echo "<meta http-equiv='refresh' content='1; url=form-daftar.php'>";
 		}
 	}

@@ -15,9 +15,9 @@ session_start();
 		<div class="form-login">
 			<form method="post">
 				<p class="text-form">User Name</p>
-				<input type="text" name="username">
+				<input type="text" name="username" required>
 				<p class="text-form">Password</p>
-				<input type="password" name="password"><br>
+				<input type="password" name="password" required><br>
 				<button type="submit" name="btnlogin">Login</button>
 			</form>
 		</div>
@@ -34,8 +34,8 @@ session_start();
 		
 		if(mysqli_num_rows($ceklogin) == 1 ){
 			$_SESSION['username'] = $username;
-			echo "Login sukses";
-			echo "<meta http-equiv='refresh' content='1.5;url=index.php'>";
+			echo "<p>Login sukses</p>";
+			echo "<meta http-equiv='refresh' content='1;url=index.php'>";
 		}else{
 			echo "<p>Login Gagal</p>";
 			echo "<meta http-equiv='refresh' content='1;url=login.php'>";
